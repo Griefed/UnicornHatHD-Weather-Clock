@@ -8,7 +8,7 @@ from pytz import timezone
 import unicornhathd as u
 
 # WEATHER
-owm = pyowm.OWM('API HERE HERE')
+owm = pyowm.OWM('API KEY HERE')
 observation = owm.weather_at_place('Europe/Berlin')
 w = observation.get_weather()
 
@@ -195,9 +195,3 @@ while True:
 
     u.show()
     time.sleep(1)
-
-
-
-
-
-
