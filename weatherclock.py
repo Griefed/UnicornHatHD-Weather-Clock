@@ -8,12 +8,12 @@ from pytz import timezone
 import unicornhathd as u
 
 # WEATHER
-owm = pyowm.OWM('YOUR API KEY HERE')
-observation = owm.weather_at_place('YOUR LOCATION HERE')
+owm = pyowm.OWM('API HERE HERE')
+observation = owm.weather_at_place('Europe/Berlin')
 w = observation.get_weather()
 
 # TIME
-england = timezone('Europe/London')
+england = timezone('Europe/Berlin')
 
 # CREATING BINARY CLOCK MATRIX (Code for binary clock by Peter Simyoni: gist.github.com/psimonyi/2856099)
 def main():
@@ -38,7 +38,7 @@ def vertical_strings(strings):
 
 # UNICORN
 u.rotation(270)
-u.brightness(0.6)
+u.brightness(0.3)
 
 # clock
 def set_hours():
@@ -122,22 +122,28 @@ def set_time():
     set_secs()
 
 # border
++status = w.get_status().lower()
+
 for i in range(0,16):
-    if weather.lower() == 'rain':
-        u.set_pixel(i,0,70,130,255)
-        u.set_pixel(0,i,70,130,255)
-        u.set_pixel(i,15,70,130,255)
-        u.set_pixel(15,i,70,130,255)
-    elif weather.lower() == 'clouds':
-        u.set_pixel(i,0,160,160,170)
-        u.set_pixel(0,i,160,160,170)
-        u.set_pixel(i,15,160,160,170)
-        u.set_pixel(15,i,160,160,170)
-    elif weather.lower() == 'sunny':
-        u.set_pixel(i,0,255,230,40)
-        u.set_pixel(0,i,255,230,40)
-        u.set_pixel(i,15,255,230,40)
-        u.set_pixel(15,i,255,230,40)
+    if status == 'snow':
+        u.set_pixel(i,0,70,130,200)
+        u.set_pixel(0,i,70,130,200)
+        u.set_pixel(i,15,70,130,200)
+        u.set_pixel(15,i,70,130,200)
+    elif status == 'rain':
+         u.set_pixel(i,0,70,130,255)
+         u.set_pixel(0,i,70,130,255)
+         u.set_pixel(i,15,70,130,255)
+         u.set_pixel(15,i,70,130,255)   
+    elif status == 'clouds':
+         u.set_pixel(i,0,160,160,170)
+         u.set_pixel(0,i,160,160,170)
+         u.set_pixel(i,15,160,160,170)
+         u.set_pixel(15,i,160,160,170)
+    elif status == 'sunny':
+         u.set_pixel(i,0,255,230,40)
+         u.set_pixel(0,i,255,230,40)
+         u.set_pixel(i,15,255,230,40)
     else:
         u.set_pixel(i,0,255,255,255)
         u.set_pixel(0,i,255,255,255)
