@@ -122,8 +122,7 @@ def set_time():
     set_secs()
 
 # border
-+status = w.get_status().lower()
-
+status = w.get_status().lower()
 for i in range(0,16):
     if status == 'snow':
         u.set_pixel(i,0,70,130,200)
