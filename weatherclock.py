@@ -9,7 +9,7 @@ import unicornhathd as u
 
 # WEATHER
 owm = pyowm.OWM('API KEY HERE')
-observation = owm.weather_at_place('Europe/Berlin')
+observation = owm.weather_at_place('Berlin, Germany')
 w = observation.get_weather()
 
 # TIME
