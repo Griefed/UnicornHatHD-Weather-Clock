@@ -1,0 +1,9 @@
+[Unit]
+Description="Run script after 10 seconds of boot"
+
+[Timer]
+OnBootSec=10
+Unit=unicornhathd.service
+
+[Install]
+WantedBy=default.target
