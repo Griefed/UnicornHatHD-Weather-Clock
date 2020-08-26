@@ -1,0 +1,14 @@
+[Unit]
+Description=unicornhathd clock
+
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/Pimoroni/unicornhathd/examples
+ExecStart=/usr/bin/python /home/pi/Pimoroni/unicornhathd/examples/weatherclock.p                                       y
+Restart=on-failure
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target
