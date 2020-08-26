@@ -6,7 +6,7 @@ Description=unicornhathd clock
 Type=simple
 User=pi
 WorkingDirectory=/home/pi/Pimoroni/unicornhathd/examples
-ExecStart=/usr/bin/python /home/pi/Pimoroni/unicornhathd/examples/weatherclock.p                                       y
+ExecStart=/usr/bin/python /home/pi/Downloads/weatherclock/weatherclock.py
 Restart=on-failure
 TimeoutStopSec=10
 
