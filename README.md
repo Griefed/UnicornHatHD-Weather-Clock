@@ -18,6 +18,8 @@ If you want to run the clock right after booting up your Pi,
 copy unicornhathd.timer && unicornhathd.service to /etc/systemd/system
 followed by 
 sudo systemctl enable unicornhathd.timer
+##### Note that the service expects the file to be in /home/pi/Downloads/weatherclock/
+
 
 ## Automate the whole thing because we're lazy
 ```
