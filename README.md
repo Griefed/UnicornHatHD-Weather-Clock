@@ -1,4 +1,7 @@
 # UnicornHat HD Weather Clock
+
+[[_TOC_]]
+
 Binary clock with weather API integration designed for Pimoroni's UnicornHat HD.
 
 Displays hours, minutes and seconds in binary format, as well as providing weather status (rainy, cloudy, sunny, etc), humidity and temperature.
